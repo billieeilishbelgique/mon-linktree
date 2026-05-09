@@ -1,0 +1,14 @@
+[build]
+  publish = "."
+
+# Permet à /admin d'afficher /admin/index.html sans 404
+[[redirects]]
+  from = "/admin"
+  to   = "/admin/index.html"
+  status = 200
+
+# Toutes les autres routes → index.html (gère les tokens d'invitation)
+[[redirects]]
+  from = "/*"
+  to   = "/index.html"
+  status = 200
